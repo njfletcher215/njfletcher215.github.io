@@ -6,8 +6,11 @@ body {
     font-family: 'Courier New', Courier, monospace;
     font-size: 12pt;
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 43276ef61a4046bd52fbb66dcf5bb4af78766eee
 .header {
     background-color: #202020;
     padding-bottom: 5px;
@@ -40,6 +43,7 @@ h2 {
         Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 36pt;
     color: whitesmoke;
+<<<<<<< HEAD
 }
 
 
@@ -49,4 +53,6 @@ h2 {
 }
 textarea {
     color: grey;
+=======
+>>>>>>> 43276ef61a4046bd52fbb66dcf5bb4af78766eee
 }
