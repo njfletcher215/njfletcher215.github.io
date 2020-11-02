@@ -6,6 +6,8 @@ body {
     font-family: 'Courier New', Courier, monospace;
     font-size: 12pt;
 }
+
+
 .header {
     background-color: #202020;
     padding-bottom: 5px;
@@ -38,4 +40,13 @@ h2 {
         Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 36pt;
     color: whitesmoke;
+}
+
+
+* form {
+    width: 50px;
+    padding: 10px;
+}
+textarea {
+    color: grey;
 }
