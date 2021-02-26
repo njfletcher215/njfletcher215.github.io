@@ -1,0 +1,28 @@
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;title&gt;Temperature Monitor&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class="header"&gt;
+            &lt;h1&gt;Is it cold in my apartment?&lt;/h1&gt;
+        &lt;/div&gt;
+        &lt;p&gt;
+            &lt;form action="insert.php" method="post"&gt;
+                &lt;label for="too_cold"&gt;Too Cold At (F):&lt;/label&gt;
+                &lt;input type="number" name="too_cold" id="too_cold" /&gt;
+                &lt;label for="too_hot"&gt;Too Hot At (F):&lt;/label&gt;
+                &lt;input type="number" name="too_hot" id="too_hot" /&gt;
+                &lt;label for="bedtime"&gt;Bedtime (24 hr time):&lt;/label&gt;
+                &lt;input type="number" name="bedtime" id="bedtime" /&gt;
+
+                &lt;button type="set"&gt;Set&lt;/button&gt;
+            &lt;/form&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+            &lt;a class="dev tools" href="devtools.php"&gt;dev tools&lt;/a&gt;
+        &lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>

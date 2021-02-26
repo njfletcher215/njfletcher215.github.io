@@ -2,8 +2,16 @@
 <html lang="en">
     <head>
         <title>Nathan Fletcher</title>
-        <link rel="stylesheet" href="software_engineering.css" />
+        <link rel="stylesheet" href="Resources/master.css" />
+        <link rel="stylesheet" href="Resources/software_engineering.css" />
         <link rel="icon" href="icon.png" />
+        <script>
+            function toggledisplay(elementID) {       
+                (function(style) {
+                    style.display = style.display === 'none' ? '' : 'none';
+                })(document.getElementById(elementID).style);
+            }
+        </script>
     </head>
     <body>
         <div class="header">
@@ -11,23 +19,54 @@
             <h2>Software Engineer</h2>
             <nav>
                 <a href="index.html">Home</a>
-                <a href="about.html">About</a>
                 <a href="projects_and_code.html" class="currentPage">Projects and Code</a>
                 <a href="https://github.com/njfletcher215">GitHub</a>
                 <a href="https://www.linkedin.com/in/NathanJFletcher/">LinkedIn</a>
-                <a href="contact.html">Contact Me</a>
                 <a class="design" href="art_home.html">Design</a>
             </nav>
         </div>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris malesuada quam ante, 
-            ac elementum sem auctor ac. Duis vitae est eros. Mauris scelerisque id nibh vel consequat. 
-            Nam molestie nunc nec tellus ultricies, et egestas erat luctus. Fusce nibh enim, congue ac iaculis in, 
-            tincidunt bibendum mi. Curabitur luctus non metus nec posuere. Donec ut accumsan risus. 
-            Aliquam condimentum risus ut nunc egestas congue. In laoreet facilisis arcu. Suspendisse potenti. 
-            Maecenas dapibus mi ipsum, id vestibulum odio sagittis ac. Nunc hendrerit auctor nibh, id blandit purus 
-            finibus nec. Sed egestas eros sit amet est placerat, accumsan mattis mauris aliquam. Fusce in elit 
-            ac erat bibendum pellentesque id consectetur orci.
-        </p>
+        <div class="bodyBox">
+            <p>
+                hotLight<br>
+                <a href="#" onClick="toggledisplay('hotLightCodeBox');">Source Code</a><br />
+                <div class="codeBox" id="hotLightCodeBox" style="display: none">
+                    <iframe src="Resources/Code/hotLight_html/home.html"></iframe>
+                </div>
+                <a href="https://github.com/njfletcher215/hotLight">GitHub</a> | 
+                <a href="Resources/Code/hotLight.zip">Download</a><br />
+                <br>
+                SampleApp_Mac<br>
+                <a href="#" onClick="toggledisplay('SampleApp_MacCodeBox');">Source Code</a><br />
+                <div class="codeBox" id="SampleApp_MacCodeBox" style="display: none">
+                    <iframe src="Resources/Code/SampleApp_Mac_html/home.html"></iframe>
+                </div>
+                <a href="https://github.com/njfletcher215/SampleApp_Mac">GitHub</a> | 
+                <a href="Resources/Code/SampleApp_Mac.zip">Download</a><br />
+                <br>
+                SMS_Sender<br>
+                <a href="#" onClick="toggledisplay('SMS_SenderCodeBox');">Source Code</a><br />
+                <div class="codeBox" id="SMS_SenderCodeBox" style="display: none">
+                    <iframe src="Resources/Code/SMS_Sender_html/home.html"></iframe>
+                </div>
+                <a href="https://github.com/njfletcher215/SMS_Sender">GitHub</a> | 
+                <a href="Resources/Code/SMS_Sender.zip">Download</a><br />
+                <br>
+                TwitterBot<br>
+                <a href="#" onClick="toggledisplay('TwitterBotCodeBox');">Source Code</a><br />
+                <div class="codeBox" id="TwitterBotCodeBox" style="display: none">
+                    <iframe src="Resources/Code/TwitterBot_html/home.html"></iframe>
+                </div>
+                <a href="https://github.com/njfletcher215/TwitterBot">GitHub</a> | 
+                <a href="Resources/Code/TwitterBot.zip">Download</a><br />
+                <br>
+                webvtt_to_txt<br>
+                <a href="#" onClick="toggledisplay('webvtt_to_txtCodeBox');">Source Code</a><br />
+                <div class="codeBox" id="webvtt_to_txtCodeBox" style="display: none">
+                    <iframe src="Resources/Code/webvtt_to_txt_html/home.html"></iframe>
+                </div>
+                <a href="https://github.com/njfletcher215/webvtt-to-txt">GitHub</a> | 
+                <a href="Resources/Code/webvtt-to-txt.zip">Download</a><br />
+            </p>
+        </div>
     </body>
 </html>

@@ -1,0 +1,16 @@
+#!/bin/sh
+# Author: Pedro Maroco (www.pmaroco.com)
+
+# Constants
+APP_JAR="SampleApp.jar"
+APP_NAME="Sample"
+VM_ARGS=""
+
+# Set the working directory
+DIR=$(cd "$(dirname "$0")"; pwd)
+
+# Set Java version
+_java="$DIR/jdk-12.0.2.jdk/Contents/Home/bin/java"
+
+# Run the application
+exec $_java $VM_ARGS -Dapple.laf.useScreenMenuBar=true -Dcom.apple.macos.use-file-dialog-packages=true -Xdock:name="$APP_NAME" -Xdock:icon="$DIR/../Resources/application.icns" -cp ".;$DIR;" -jar "$DIR/$APP_JAR"

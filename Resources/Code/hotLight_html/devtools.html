@@ -1,0 +1,49 @@
+<pre>
+&lt;!DOCTYPE=html&gt;
+&lt;html lang=en&gt;
+&lt;head&gt;
+  &lt;title&gt;Dev Tools&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Temp over time&lt;/h1&gt;
+
+  &lt;?php
+    // insert servername, username, password, and database name for your MySQL database
+    $servername = "SERVERNAME";
+    $username = "USERNAME";
+    $password = "PASSWORD";
+    $dbname = "DATABASE";
+
+    // Create connection
+    // connects specifically to dbname, so we don't have to select a database later
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+    // Check connection
+    if (!$conn) {
+      die("Connection failed: " . mysqli_connect_error());
+    }
+
+    $sql = "SELECT time, temp FROM records";
+    // this gives the command in sql to the database in conn
+    $result = mysqli_query($conn, $sql);  // result will be the table we display
+
+    if (mysqli_num_rows($result) &gt; 0) {
+      // set up a table and give it a heading
+      echo "&lt;table border='1px'&gt;";
+      echo "&lt;tr&gt;&lt;th&gt;time&lt;/th&gt;&lt;th&gt;temp&lt;/th&gt;&lt;/tr&gt;";
+      while($row = mysqli_fetch_assoc($result)) { // fetch every row in the table as an associative array
+	      echo "&lt;tr&gt;";  // start a new row
+	      echo "&lt;td&gt;" . $row["time"]. "&lt;/td&gt;";  // put the time in its own cell
+	      echo "&lt;td&gt;" . $row["temp"]. "&lt;/td&gt;";  // put the temp in its own cell
+	      echo "&lt;/tr&gt;";
+      }
+      echo "&lt;/table&gt;";
+    } else {  // if result is empty
+      echo "0 results";
+    }
+
+    mysqli_close($conn);
+  ?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>

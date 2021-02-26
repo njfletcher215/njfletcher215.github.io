@@ -1,0 +1,60 @@
+<h1>SampleApp_Mac</h1>
+<p>
+    template for creating a MacOS app from a JAR file
+</p>
+
+<p>
+    <strong>How to use:</strong>
+        <ol>
+            <li>
+                Download the directory and a version of java (preferably a JRE)
+                <p class="note">
+                    note: if this app is for non-personal use, make sure to liscence the correct version of Java, 
+                    and/or rely on the user's installation
+                </p>
+            </li>
+            <li>
+                right-click "App.app" (might display as simply "App") and select "show package contents"
+            </li>
+            <li>
+                copy the java folder you just installed and place it into the App.app directory under 
+                Contents > MacOS (and delete the empty folder jdk-12.0.2.jdk, it is just a placeholder)
+            </li>
+            <li>
+                go to Contents > Resources and replace "application.icns" with the desired app icon 
+                (and name it "application.icns")
+                <ol>
+                    <li>
+                        if for whatever reason you don't want your icon to be called application.icns, 
+                        go to Info.plist and under "&lt;key&gt;CFBundleIconFile&lt;/key&gt;", 
+                        where it says "&lt;string&gt;application.icns&lt;/string&gt;", change 
+                        "application.icns" to "&lt;yourIconFile.icns&gt;"
+                    </li>
+                </ol>
+            </li>
+            <li>
+                go to Contents > MacOS and replace "SampleApp.jar" with the .jar file of your app
+            </li>
+            <li>
+                open "launcher" with any text editor
+                <ol>
+                    <li>
+                        under "# Constants" replace APP_JAR="SampleApp.jar" with APP_JAR="yourFile.jar"
+                    </li>
+                    <li>
+                        in the next line, replace APP_NAME="Sample" with APP_NAME="yourAppName"
+                    </li>
+                    <li>
+                        under "# Set Java version", replace _java="$DIR/jdk-12.0.2.jdk/Contents/Home/bin/java" 
+                        with the path of your java installation (specifically, the path to the executable file 
+                        "java", should look like "$DIR/yourJavaFolderName/Contents/Home/bin/java", 
+                        but that is using a JDK, it might look slightly different on a JRE)
+                    </li>
+                </ol>
+            </li>
+            <li>
+                now, "App.app" (you should rename it now, if you haven't already) should display your 
+                app icon and run your .jar file when clicked on
+            </li>
+        </ol>
+</p>

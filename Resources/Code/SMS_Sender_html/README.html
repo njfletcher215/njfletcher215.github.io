@@ -1,0 +1,32 @@
+<h1>SMS_Sender</h1>
+<p>
+Instructions:
+</p>
+<p>
+    <ol>
+        <li>
+            replace "#!/usr/bin/python3" with the path to your python interpreter in both files
+        </li>
+        <li>
+            install sys and smtplib if you don't already have them
+        </li>
+        <p>
+            in SMS.py:
+        </p>
+        <li>
+            replace "@messaging.sprintpcs.com" with your carrier's updated gateway (if you have sprint, 
+            this is up-to-date as of 2020)
+        </li>
+        <li>
+            replace "555-555-5555" with your phone number (or another number you want to send texts too)
+        </li>
+        <li>
+            replace "USERNAME" and "PASSWORD" with the username and password of a gmail account you control
+        </li>
+    </ol>
+</p>
+<p>
+    To Use, either use the bash command "python sendMessage.py 'this is your message'" while in a directory 
+    with sendMessage.py (SMS.py should also be in the same directory) or create your own python script that 
+    utilizes SMS's send(message) function.
+</p>
